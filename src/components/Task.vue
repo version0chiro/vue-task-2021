@@ -21,7 +21,7 @@ export default {
         onDelete(id) {
             this.$emit('delete-task', id)
         }
-    }, emits: ['delete-task']
+    }, emits: ['delete-task','toggle-reminder']
 }
 </script>
 
