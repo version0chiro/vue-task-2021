@@ -1,7 +1,11 @@
 <template>
     <header>
         <h1>{{ title }}</h1>
-        <Button @click="onClick()" text="Add Task" color="green" />
+        <Button
+            @btn-click="onClick()"
+            :color="showAddTask ? 'red' : 'green'"
+            :text="showAddTask ? 'Close' : 'Add Task'"
+        />
         <!-- <Button text="Update Task" color="blue"/> -->
         <!-- <Button text="Delete Task" color="red"/> -->
     </header>
@@ -15,6 +19,10 @@ export default {
         title: {
             type: String,
             default: 'Welcome to Vue.js'
+        },
+        showAddTask: {
+            type: Boolean,
+            default: false
         }
     }, components: {
         Button
