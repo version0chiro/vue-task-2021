@@ -20,9 +20,9 @@ export default {
         Button
     }, methods: {
         onClick() {
-            console.log("add");
+            this.$emit('toggle-add-task')
         }
-    }
+    }, emits: ["toggle-add-task"]
 }
 </script>
 

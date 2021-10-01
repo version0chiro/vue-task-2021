@@ -1,5 +1,5 @@
 <template>
-    <button :style="{background:color}" class="btn">{{ text }}</button>
+    <button @click="$emit('toggle-add-task')" :style="{ background: color }" class="btn">{{ text }}</button>
 </template>
 
 <script>
@@ -14,7 +14,9 @@ export default {
         }, color: {
             type: String,
             default: 'green'
-        }
+        }, emits: [
+            'toggle-add-task'
+        ]
     }
 }
 </script>
